@@ -1,7 +1,10 @@
 import crypto from 'crypto'
 import https from 'https'
-import { Vonage } from '@vonage/server-sdk';
-import axios from 'axios';
+import { Vonage } from '@vonage/server-sdk'
+import axios from 'axios'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const vonage = new Vonage({
   apiKey: process.env.VONAGE_API_KEY,
@@ -70,5 +73,7 @@ const hotels = response.data.data
 const availableHotels = hotels.filter((hotel) => hotel.isSoldOut === 0) 
 if(availableHotels.length > 0) {
   sendSMS()
+} else {
+  console.log("No hotels... sad...")
 }
 

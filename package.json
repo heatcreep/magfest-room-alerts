@@ -12,6 +12,7 @@
     "@vonage/server-sdk": "^3.10.0",
     "axios": "^1.6.1",
     "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
     "https": "^1.0.0",
     "node-fetch": "^3.3.2",
     "undici": "^5.27.2"
