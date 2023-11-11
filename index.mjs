@@ -4,8 +4,8 @@ import { Vonage } from '@vonage/server-sdk';
 import axios from 'axios';
 
 const vonage = new Vonage({
-  apiKey: "d036a08d",
-  apiSecret: "HQhnfyr9PxndNbOw"
+  apiKey: process.env.VONAGE_API_KEY,
+  apiSecret: process.env.VONAGE_API_SECRET
 })
 
 const from = "13212516911"

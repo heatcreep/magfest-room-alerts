@@ -12,3 +12,8 @@ jobs:
           node-version: "16"
       - run: npm install
       - run: node index.mjs
+        env:
+          CI: true
+          VONAGE_API_KEY: ${{ secrets.VONAGE_API_KEY }}
+          VONAGE_API_SECRET: ${{ secrets.VONAGE_API_SECRET }}
+
